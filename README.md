@@ -20,8 +20,8 @@ A graphical user interface for the [NeuTTS-nano](https://github.com/neuphonic/ne
     - [NeuCodec codec model](https://huggingface.co/collections/neuphonic/neucodec)
 
 Tips: 
-    - Don’t forget the big files, git clone will not get them (e.g. model.safetensors, tokenizer.json, tokenizer_config.json) 
-    - NeuCodec don’t run 100% locally, it needs network each time you load a model (e.g. at start or then switching language), once loaded it will work offline.
+- Don’t forget the big files, git clone will not get them (e.g. model.safetensors, tokenizer.json, tokenizer_config.json) 
+- NeuCodec don’t run 100% locally, it needs network each time you load a model (e.g. at start or then switching language), once loaded it will work offline.
     
 ```bash
 git clone https://github.com/neuphonic/neutts
