@@ -38,22 +38,24 @@ git clone https://github.com/ryo-ohki-code/neutts-gui
 cd neutts-gui/
 ```
 
-3. Install dependencies:
+3. Install dependencies and move python file:
 ```bash
 pip install -r requirements.txt
+mv neuTTS_GUI.py ../neutts/
 ```
 
 4. Download the desired models (English, French, Spanish, German):
     - [NeuTTS backbone models](https://huggingface.co/collections/neuphonic/neutts-nano-multilingual-collection)
-    - If needed adjust file paths in the code to match their location (backbone_repo_*, codec_repo_path, ../neutts/samples/)
+    - Don't forget to move neutts-gui/neuTTS_GUI.py to neutss/
+    - If needed adjust file paths in the code to match their location (backbone_repo_*, codec_repo_path)
     - Ensure all model files are accessible
 
 ```
 .
-├── neutts-gui/
+├── neutts-gui/             # You can delete it once dep. are installed and neuTTS_GUI.py file moved to neutts/
 ├── neutts/                 # From Github neuphonic
 ├── neucodec/               # From HuggingFace neuphonic
-├── neutts-nano/            # Model English version
+├── neutts-nano/            # From HuggingFace neuphonic - Model English version
 ├── neutts-nano-spanish/    # Download as you need
 ├── neutts-nano-german/     # Download as you need
 └── neutts-nano-french/     # Download as you need
