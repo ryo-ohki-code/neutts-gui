@@ -76,8 +76,8 @@ backbone_repo_DE_path = os.path.abspath("../neutts-nano-german")
 
 codec_repo_path = os.path.abspath("/../neucodec")
 
-ref_audio_path = "samples/dave-EN.wav"
-ref_text_path = "samples/dave-EN.txt"
+ref_audio_path = "samples/dave.wav"
+ref_text_path = "samples/dave.txt"
 
 tts_actual_language = "en"
 tts_actual_compute = "cuda"
