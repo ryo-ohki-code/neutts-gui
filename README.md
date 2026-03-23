@@ -13,6 +13,9 @@ A graphical user interface for the [NeuTTS-nano](https://github.com/neuphonic/ne
 - **Audio Saving**: Save generated audio to WAV files
 - **Chunked Processing**: Intelligent text chunking for better audio quality
 
+![Screenshot](https://raw.githubusercontent.com/ryo-ohki-code/neutts-gui/refs/heads/main/screenshot.png)
+
+
 ## Installation
 
 1. Download and install NeuTTS: 
