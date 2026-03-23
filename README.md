@@ -15,29 +15,41 @@ A graphical user interface for the [NeuTTS-nano](https://github.com/neuphonic/ne
 
 ## Installation
 
-1. Clone the repository:
+1. Download and install NeuTTS: 
+    - [NeuTTS](https://github.com/neuphonic/neutts?tab=readme-ov-file#get-started-with-neutts):
+    - [NeuCodec codec model](https://huggingface.co/collections/neuphonic/neucodec)
+
+Tips: 
+    - Don’t forget the big files, git clone will not get them (e.g. model.safetensors, tokenizer.json, tokenizer_config.json) 
+    - NeuCodec don’t run 100% locally, it needs network each time you load a model (e.g. at start or then switching language), once loaded it will work offline.
+    
+```bash
+git clone https://github.com/neuphonic/neutts
+cd neutts/
+# Then follow official installation procedure
+```
+
+2. Clone this repository:
 ```bash
 git clone https://github.com/ryo-ohki-code/neutts-gui
-git clone https://github.com/neuphonic/neutts
 cd neutts-gui/
 ```
 
-2. Install dependencies:
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Download the required models:
+4. Download the desired models (English, French, Spanish, German):
     - [NeuTTS backbone models](https://huggingface.co/collections/neuphonic/neutts-nano-multilingual-collection)
-    - [NeuCodec codec model](https://huggingface.co/collections/neuphonic/neucodec)
-    - Move main.py (NeuTTS_GUI) to the NeuTTS-nano directory
-    - Or if needed adjust file paths in the code to match their location
-    - Ensure all model files are accessible from the NeuTTS directory
+    - If needed adjust file paths in the code to match their location (backbone_repo_*, codec_repo_path, ../neutts/samples/)
+    - Ensure all model files are accessible
 
 ```
 .
 ├── neutts-gui/
-├── neutts/                 # From Github neuphonic, copy neuTTS_GUI.py here
+├── neutts/                 # From Github neuphonic
+├── neucodec/               # From HuggingFace neuphonic
 ├── neutts-nano/            # Model English version
 ├── neutts-nano-spanish/    # Download as you need
 ├── neutts-nano-german/     # Download as you need
@@ -48,7 +60,7 @@ pip install -r requirements.txt
 
 1. Run the application:
 ```bash
-python main.py
+python neuTTS_GUI.py
 ```
 
 2. **Input Text**: Enter or paste text in the main text area
