@@ -68,19 +68,20 @@ def get_available_samples():
     return sorted(list(samples))
 
 
-# === Setup once ===
+# === Setup ===
 backbone_repo_EN_path = os.path.abspath("../neutts-nano")
 backbone_repo_ES_path = os.path.abspath("../neutts-nano-spanish")
 backbone_repo_FR_path = os.path.abspath("../neutts-nano-french")
 backbone_repo_DE_path = os.path.abspath("../neutts-nano-german")
 
-codec_repo_path = os.path.abspath("/home/user/AI_tools/NeuTTS/neuphonic/neucodec")
+codec_repo_path = os.path.abspath("/../neucodec")
+
+ref_audio_path = "samples/dave-EN.wav"
+ref_text_path = "samples/dave-EN.txt"
 
 tts_actual_language = "en"
 tts_actual_compute = "cuda"
 
-ref_audio_path = "samples/rick-garage-v2-EN.wav"
-ref_text_path = "samples/rick-garage-v2-EN.txt"
 
 # Ensure audio and text files exist
 if not os.path.exists(ref_audio_path):
